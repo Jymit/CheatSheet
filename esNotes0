@@ -1,0 +1,17 @@
+#Create Index
+$ curl -XPUT 'http://localhost:9200/twitter/'
+
+#Add document
+$ curl -XPUT 'http://localhost:9200/twitter/tweet/1' -d '{
+    "tweet" : {
+        "user" : "kimchy",
+        "post_date" : "2009-11-15T14:12:12",
+        "message" : "trying out Elastic Search"
+    }
+}'
+
+#Get document by id
+$ curl -XGET 'http://localhost:9200/twitter/tweet/1'
+
+#Search document
+$ curl -XGET 'http://localhost:9200/twitter/tweet/_search?q=user:kimchy'
