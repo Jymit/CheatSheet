@@ -1,0 +1,52 @@
+/**
+* notes
+*/
+class HelloHackintoshApp {
+    public static void main(String[] args) {
+        System.out.println("Hello Hackintosh!");
+    }
+}
+
+
+
+
+// POM Project ObJect Model
+mvn //maven
+//m2e plugin
+//help|install new software|add|addrepo
+// Jest //Jest is a Java HTTP Rest client for ElasticSearch // https://github.com/searchbox-io/Jest
+
+
+
+Using Java API
+To connect to the locally installed ES server,
+create client
+create index and set settings and mappings for document type
+add documents to the index
+get document
+
+//Create Client
+Settings settings = ImmutableSettings.settingsBuilder().put("cluster.name", "localtestsearch").build();
+TransportClient transportClient = new TransportClient(settings);
+transportClient = transportClient.addTransportAddress(new InetSocketTransportAddress("localhost", 9300));
+return (Client) transportClient;
+
+//Create Index and set settings and mappings
+
+CreateIndexRequestBuilder createIndexRequestBuilder = client.admin().indices().prepareCreate(indexName);
+createIndexRequestBuilder.execute().actionGet();
+
+//Add documents
+IndexRequestBuilder indexRequestBuilder = client().prepareIndex(indexName, documentType, documentId);
+//build json object
+XContentBuilder contentBuilder = jsonBuilder().startObject().prettyPrint();
+contentBuilder.field("name", "jai");
+contentBuilder.stopObject();
+indexRequestBuilder.setSource(contentBuilder);
+IndexResponse response = indexRequestBuilder .execute().actionGet();
+
+//Get document
+GetRequestBuilder getRequestBuilder = client().prepareGet(indexName, type, id);
+getRequestBuilder.setFields(new String[]{"name"});
+GetResponse response = getRequestBuilder.execute().actionGet();
+String name = response.field("name").getValue().toString();
