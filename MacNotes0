@@ -1,0 +1,17 @@
+// jkhondhu
+
+macOS 10.12.1
+
+$ /usr/bin/openssl enc -aes-256-cbc -e -in /Users/hackintosh/Desktop/secretDoc.pdf -out /Users/hackintosh/Desktop/reallySecretDoc.pdf
+$ /usr/bin/openssl enc -aes-256-cbc -d -in /Users/hackintosh/Desktop/reallySecretDoc.pdf -out /Users/hackintosh/Desktop/theRealSecretDoc.pdf
+
+$ /usr/bin/defaults read /Library/Preferences/com.apple.
+
+$ /usr/bin/caffeinate -u -t 7200
+
+$ /usr/bin/python -m SimpleHTTPServer 6789
+$ /usr/bin/nohup /usr/bin/python -m SimpleHTTPServer 6789
+
+$  for i in {1..5}; do echo $i; done
+
+$ for hosts in $(cat servers.txt) ; do ssh root@$hosts "uname -mrs" ; done
