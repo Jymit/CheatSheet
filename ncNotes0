@@ -1,0 +1,25 @@
+
+# /usr/bin/nc -l 1234 
+# /usr/bin/nc 127.0.0.1 1234 
+
+# /usr/bin/nc -l 1234 > filename.out
+# /usr/bin/nc host.example.com 1234 < filename.in 
+
+# /usr/bin/nc -z -vv -w 1 192.168.1.100 20-25
+
+
+-u' Use UDP instead of the default option of TCP.
+
+-v' Have nc give more verbose output.
+
+-w timeout
+If a connection and stdin are idle for more than timeout seconds, then the connection is silently closed. The -w flag has no effect on the -l option, i.e. nc will listen forever for a connection, with or without the -w flag. The default is no timeout.
+
+-X proxy_version
+Requests that nc should use the specified protocol when talking to the proxy server. Supported protocols are ''4'' (SOCKS v.4), ''5'' (SOCKS v.5) and ''connect'' (HTTPS proxy). If the protocol is not specified, SOCKS version 5 is used.
+
+-x proxy_address[
+:port]
+Requests that nc should connect to hostname using a proxy at proxy_address and port. If port is not specified, the well-known port for the proxy protocol is used (1080 for SOCKS, 3128 for HTTPS).
+
+-z' Specifies that nc should just scan for listening daemons, without sending any data to them. It is an error to use this option in conjunction with the -l option. 
