@@ -1,0 +1,97 @@
+var str = "HELLO WORLD";
+var res = str.charAt(0);
+
+var num = 10;
+while (num > 0) {
+  if (num % 2 == 0) {
+    console.log(num);
+  }
+  num--;
+}
+
+
+
+var numSheep = 4;
+var monthsToPrint = 12;
+for (var monthNumber = 1; monthNumber <= monthsToPrint; monthNumber++) {
+  numSheep = numSheep * 4;
+  console.log("There will be " + numSheep + " sheep after " + monthNumber + " month(s)!");
+}
+
+
+
+var currentGen = 1;
+var totalGen = 19;
+var totalMW = 0;
+while (currentGen <= 4) {
+  totalMW += 62;
+  console.log("Generator #" + currentGen + " is on, adding 62 MW, for a total of " + totalMW + " MW!");
+  currentGen++;
+}
+for (currentGen = 5; currentGen <= totalGen; currentGen++) {
+  totalMW += 124;
+  console.log("Generator #" + currentGen + " is on, adding 124 MW, for a total of " + totalMW + " MW!");
+}
+
+
+
+
+<html>
+  <head>
+    <script src="../scripts/yellowstone/oldFaithful.js"></script>
+  </head>
+  <body>
+    <h1>Welcome to the JavaScript!</h1>
+  </body>
+</html>
+
+
+
+//The == (or !=) operator performs an automatic type conversion if needed. The === (or !==) operator will not perform any conversion. It compares the value and the type, which could be considered faster than ==.
+[10] === 10    // is false
+[10]  == 10    // is true
+'10' == 10     // is true
+'10' === 10    // is false
+ []   == 0     // is true
+ [] ===  0     // is false
+
+
+//Random item from an array
+var items = [12, 548 , 'a' , 2 , 5478 , 'foo' , 8852, , 'Bar' , 2145 , 119];
+
+var  randomItem = items[Math.floor(Math.random() * items.length)];
+
+Math.floor( 45.05); //  45
+Math.floor(  4   ); //   4
+Math.floor(-45.05); // -46 
+Math.floor10(55.59, -1);   // 55.5
+
+Math.ceil(4);      // 4
+Math.ceil(7.004);  // 8
+Math.ceil10(51, 1);        // 60
+
+Math.round10(55, 1);       // 60
+Math.round10(54.9, 1);     // 50
+
+//Math.trunc() truncates (cuts off) the dot and the digits to the right of it,
+no matter whether the argument is a positive or negative number.
+
+
+if (conected) {  
+    login();
+}
+//shorthand
+conected && login();  
+
+
+var string = "john john";  
+console.log(string.replace(/hn/, "ana")); // "joana john"  
+console.log(string.replace(/hn/g, "ana")); // "joana joana"
+
+var array1 = [1, 2, 3];  
+var array2 = [4, 5, 6];  
+console.log(array1.concat(array2)); // [1,2,3,4,5,6]; 
+//merge the second array in the first one reducing the memory usage
+console.log(array1.push.apply(array1, array2)); // [1,2,3,4,5,6];  
+
+
