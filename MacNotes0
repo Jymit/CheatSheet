@@ -1,6 +1,4 @@
-// jkhondhu
-
-macOS 10.12.1
+#### macOS 10.12.1
 
 $ /usr/bin/openssl enc -aes-256-cbc -e -in /Users/hackintosh/Desktop/secretDoc.pdf -out /Users/hackintosh/Desktop/reallySecretDoc.pdf
 $ /usr/bin/openssl enc -aes-256-cbc -d -in /Users/hackintosh/Desktop/reallySecretDoc.pdf -out /Users/hackintosh/Desktop/theRealSecretDoc.pdf
