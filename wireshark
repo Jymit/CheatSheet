@@ -236,6 +236,9 @@ $ sudo ifconfig eth0 hw ether AA:BB:CC:DD:EE:FF
 $ sudo ifconfig eth0 up
 
 
+//pre wireshark
+Web Proxy Autodiscovery (WPAD) is a proposed Internet protocol that allows a client, such as a Web browser or a streaming media
+application, to automatically locate and interface with cache services in a network so that information can be delivered more quickly to the user.
 
 
 //wireshark && tshark filters
